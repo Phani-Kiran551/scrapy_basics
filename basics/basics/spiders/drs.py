@@ -1,6 +1,6 @@
 import imp
 from jmespath import search
-import scrapy
+import scrapy, logging
 from scrapy.shell import inspect_response
 
 class DrsSpider(scrapy.Spider):
@@ -13,6 +13,21 @@ class DrsSpider(scrapy.Spider):
     }
     
     def parse(self, response):
+        logger = logging.getLogger()
+        logger.setLevel(logging.INFO)
         # inspect_response(response, self)
+        """Go to the terminal and run
+        
+        ```bash
+        spider using scrapy crawl drs
+        ```
+        and paste this command in the interactive shell.
+        
+        ```bash
         request.headers.get('Cookie').split(b';')[-1].decode().strip().replace(" ","")
+        ```
+        """
+
+        logger.info("starts a scrapy interactive shell by which when we type in the above commands will get us the cookies.")
+        
         

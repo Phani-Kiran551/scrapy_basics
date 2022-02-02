@@ -1,0 +1,3 @@
+INFO:scraper:loaded https://docs.python.org/3/howto/logging-cookbook.html
+INFO:scraper:loaded https://en.wikipedia.org/wiki/London_Bridge
+INFO:scraper:loaded https://en.wikipedia.org/wiki/London_Bridge
